@@ -1,0 +1,17 @@
+<div class="container">
+
+
+  <div class="col-md-6 col-lg-6 col-sm-6">
+    <h2 highlight>Users</h2>
+
+    <ul class="heroes">
+      <li *ngFor="let user of users"
+          [class.selected]="user === selectedUser" (click)="manageDetails(user)">
+        <span>{{user.firstName}}</span>
+        <button class="delete" (click)="delete(user); $event.stopPropagation()">x</button>
+      <li>
+    </ul>
+  </div>
+
+
+</div>

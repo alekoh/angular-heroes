@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Register</h2>
+    <br/>
+    <!-- Right of the bat, we no longer declare a local variable but use the formGroup directive and set it the form object we defined in the constructor.
+    Throughout the form, we will reference the form root object as can be seen in the submitForm function.-->
+    <form (ngSubmit)="add(form.value)" (keyup.enter)="add(form.value)">
+
+        <!-- Rather than set an ngModel, we use the formControl directive to sync our input to the form object.
+        Notice that we are also setting the attribute we wish the corresponding input to sync with.
+        We no longer need the name attribute, but can optionally add it. -->
+        <md-input-container class="full-width">
+            <input mdInput placeholder="First name" type="text" [formControl]="form.controls['fname']">
+        </md-input-container>
+
+
+        <md-input-container class="full-width">
+            <input mdInput placeholder="Last name" type="text" [formControl]="form.controls['lname']">
+        </md-input-container>
+
+
+        <md-input-container class="full-width">
+            <input mdInput placeholder="Username"  type="text" [formControl]="form.controls['username']">
+        </md-input-container>
+
+
+        <md-input-container class="full-width">
+            <input mdInput placeholder="Password (min 6 characters)" type="password" [formControl]="form.controls['password']">
+        </md-input-container>
+
+
+        <button md-raised-button type="submit" color="primary" [disabled]="!form.valid">Submit</button>
+        <a [routerLink]="['/dashboard']" class="btn btn-link">Cancel</a>
+
+    </form>
+</div>
+

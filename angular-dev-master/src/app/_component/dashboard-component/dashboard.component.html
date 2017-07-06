@@ -1,0 +1,19 @@
+
+<div class="container">
+    <h3>Top Heroes</h3>
+
+    <br/>
+
+    <md-grid-list cols="4" rowHeight="3:1" gutterSize="13px">
+        <md-grid-tile *ngFor="let hero of heroes" class="shadow-box" [style.font-size]="fontSize" [routerLink]="['/detail', hero.id]"> {{ hero.name }} </md-grid-tile>
+    </md-grid-list>
+
+
+    <div class="col-md-offset-4 col-lg-offset-4 col-sm-offset-4">
+        <hero-search></hero-search>
+    </div>
+</div>
+
+
+
+

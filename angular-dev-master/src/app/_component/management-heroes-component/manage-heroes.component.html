@@ -1,0 +1,31 @@
+<div class="container">
+
+    <!--  Adding new hero -->
+    <div class="addHero">
+        <form (ngSubmit)="add(form.value)" (keyup.enter)="add(form.value)">
+            <md-input-container>
+                <input mdInput [formControl]="form.controls['name']" placeholder="Hero name">
+            </md-input-container>
+
+            <button md-button type="submit">
+                Add Hero
+            </button>
+        </form>
+    </div>
+
+
+    <div>
+        <h2 highlight>Heroes</h2>
+
+        <md-nav-list class="heroes">
+            <md-list-item *ngFor="let hero of heroes" [routerLink]="['/management', hero.id]" class="item shadow-box">
+                {{ hero.name }}
+                <span class="space-between"></span>
+                <button md-raised-button color="warn" class="delete" (click)="delete(hero); $event.stopPropagation()">x</button>
+            </md-list-item>
+
+        </md-nav-list>
+    </div>
+
+</div>
+

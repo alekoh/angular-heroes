@@ -1,0 +1,27 @@
+<div class="container">
+
+    <!-- List of heroes -->
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-sm-6">
+            <h2 highlight>My Heroes</h2>
+
+            <md-nav-list class="heroes" >
+                <md-list-item *ngFor="let hero of heroes" class="shadow-box" [routerLink]="['/heroes', hero.id]">
+                     {{ hero.name }}
+                    <span class="space-between"></span>
+                    <img src="../../../../favicon.ico" />
+                </md-list-item>
+
+            </md-nav-list>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-sm-6 pull-down">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+
+
+
+
+</div>

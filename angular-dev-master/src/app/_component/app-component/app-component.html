@@ -1,0 +1,38 @@
+
+
+
+
+<div class="main">
+
+    <header>
+        <md-toolbar color="primary" class="shadow-box">
+
+        <span class="left-buttons">
+            <a routerLink="/dashboard"><button md-button><span><img class="mat-icon" src="../../../favicon.ico"> </span> {{ title }}</button></a>
+            <a *ngIf="!authService.isLoggedIn()" routerLink = "/heroes"><button md-button>Heroes </button></a>
+        </span>
+
+            <span class="space-between"></span>
+
+            <span class="rightButtons">
+            <div  *ngIf="!authService.isLoggedIn()">
+                <a routerLink = "/register"><button md-button>Register</button></a>
+                <a routerLink = "/login"><button md-button>Login</button></a>
+            </div>
+
+            <div *ngIf="authService.isLoggedIn()">
+                <a routerLink="/hidden"> <button md-button> Hero Management </button></a>
+                <button md-raised-button color="warn" (click)="logout()">Logout</button>
+            </div>
+        </span>
+
+
+        </md-toolbar>
+    </header>
+
+
+    <router-outlet></router-outlet>
+
+
+</div>
+

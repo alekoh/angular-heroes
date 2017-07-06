@@ -1,0 +1,49 @@
+/* Master Styles */
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+/* everywhere else */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+a:hover, a:visited, a:link, a:after {
+    text-decoration: none;
+}
+
+.space-between {
+    flex: 1 1 auto;
+}
+
+button {
+    color: #EEEEEE;
+}
+
+.site-content {
+    flex: 2 1 auto;
+}
+
+.full-width{
+    width: 100%
+}
+
+.shadow-box{
+    box-shadow: 5px 5px 2px #d3d3d3;
+}
+
+.help-block{
+    color: darkred;
+}
+
+.space-between {
+    flex: 1 1 auto;
+}
+
+md-list-item {
+    background-color: #3f51b9;
+    margin-bottom: 10px;
+    width: 70%;
+    flex: 1 1 auto;
+}

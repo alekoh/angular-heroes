@@ -1,0 +1,11 @@
+.pull-down {
+    margin-top: 10%;
+}
+
+.mat-list-item {
+    color: white;
+}
+
+md-list-item:hover {
+    color: #e13137;
+}

@@ -1,0 +1,41 @@
+<div class="container">
+
+    <h2>Login</h2>
+
+    <div class="internal-login">
+
+        <form (ngSubmit)="appLogin(form.value)" (keyup.enter)="appLogin(form.value)" class="full-width">
+
+            <md-input-container class="full-width">
+                <input mdInput placeholder="Username" type="text" [formControl]="form.controls['username']">
+            </md-input-container>
+
+            <br/>
+
+            <md-input-container class="full-width">
+                <input mdInput placeholder="Password (min 6 characters)" type="password" [formControl]="form.controls['password']">
+            </md-input-container>
+
+
+            <br/>
+            <button md-raised-button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <br/>
+
+    <div class="external-login">
+        <h4>Login with: </h4>
+
+        <div><button md-raised-button color="primary" (click)="onSubmit()">Login with OAuth2</button></div>
+
+        <br/>
+
+        <div><a class="facebookLink" href="http://localhost:3333/auth/facebook">
+            <button md-raised-button class="facebookButton">Facebook Login</button>
+        </a></div>
+
+    </div>
+
+
+</div>

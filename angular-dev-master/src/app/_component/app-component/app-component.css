@@ -1,0 +1,22 @@
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover, a:visited, a:link, a:after {
+    text-decoration: none;
+}
+
+.space-between {
+    flex: 1 1 auto;
+}
+
+button {
+    color: #EEEEEE;
+}
+
+.example-sidenav {
+    padding: 20px;
+}

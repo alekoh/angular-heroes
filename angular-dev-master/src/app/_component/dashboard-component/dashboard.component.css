@@ -1,0 +1,15 @@
+md-grid-tile {
+    background-color: #3f51b9;
+    color: white;
+    cursor: pointer;
+}
+
+md-grid-tile:hover {
+    background-color: transparent;
+    color: #e13137;
+}
+
+md-slider {
+    width: 100%;
+    margin-top: 5%;
+}

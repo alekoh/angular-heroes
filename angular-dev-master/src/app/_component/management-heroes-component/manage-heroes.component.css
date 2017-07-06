@@ -1,0 +1,15 @@
+.delete {
+  min-width: 1%;
+}
+
+.item {
+    color: white;
+}
+
+.addHero {
+  margin-top: 5%;
+}
+
+md-list-item:hover {
+    color: #e13137;
+}

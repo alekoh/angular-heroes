@@ -1,0 +1,4 @@
+.external-login > a:hover, a:after, a:visited, a:link {
+    text-decoration: none;
+}
+

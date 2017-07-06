@@ -1,0 +1,10 @@
+md-list-item {
+    background-color: #3f51b9;
+    color: white;
+    cursor: pointer;
+}
+
+md-list-item:hover {
+    background-color: transparent;
+    color: #e13137;
+}
